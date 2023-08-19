@@ -5,7 +5,7 @@ import VideoSort from "./Video";
 function WholeWeb() {
   return (
     <>
-      <div className="dark:bg-[#2B2B2B]">
+      <div >
         <VideoSort />
       </div>
     </>

@@ -47,8 +47,9 @@ const VideoSort = () => {
 
   return (
     <>
-     <div className={` w-[100%] py-[7px] bg-white dark:bg-[#222222] shadow-xl z-10 duration-200 font-montserrat  ${
-        scrolled ? `fixed bg-white z-10 mt-[105px]` : ""
+     {/* <div className={` w-[100%] py-[7px] bg-white dark:bg-[#222222] shadow-xl z-10 duration-200 font-montserrat  
+     ${
+        scrolled ? `fixed bg-white z-10 top-[80px]` : ""
       }`}>
      <div
         className="flex justify-evenly items-center font-montserrat h-[60px]"
@@ -60,9 +61,9 @@ const VideoSort = () => {
         </button>
         <button className="px-4 py-2 bg-green-500 rounded-xl" onClick={() => filteredCategory("Advanced")}>Advanced</button>
       </div>
-     </div>
+     </div> */}
 
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center ml-[50px]">
         {filteredData.map((detail, index) => (
           <div
             className="m-[15px]"
@@ -70,7 +71,7 @@ const VideoSort = () => {
             key={index}
           >
             <div className="relative mb-[70px]" >
-              <div className="relative w-[350px] h-[200px] flex justify-center items-center cursor-pointer">
+              <div className="relative w-[320px] h-[200px] flex justify-center items-center cursor-pointer">
                 <video
                   className="absolute w-[100%] duration-300 ease-in rounded-xl mb-5 border-2 border-green-500"
                   muted
@@ -81,7 +82,7 @@ const VideoSort = () => {
                 </video>
               </div>
 
-              <div className="bg-white dark:bg-[#232323] drop-shadow-xl mt-3 py-4 w-[350px]  rounded-xl">
+              <div className="bg-white dark:bg-[#232323] drop-shadow-xl mt-3 py-4 w-[320px]  rounded-xl">
                 <p
                   className="text-[#222] dark:text-white text-[0.9em] font-bold p-[10px] cursor-pointer font-montserrat"
                   title="A music video of Arrdee and Aitch - War"
@@ -98,7 +99,7 @@ const VideoSort = () => {
                   </a>
                   <span className="text-[#555] dark:text-green-500 flex items-center font-montserrat">
                     <GoClock />
-                    <h1>5 days ago</h1>
+                    <h1>{detail.name}</h1>
                   </span>
                 </div>
               </div>
